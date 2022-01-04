@@ -1,0 +1,10 @@
+stages:
+  - test
+
+bundle-install-test-job:
+  stage: test
+  script:
+    - composer create-project dbp/relay-server-template relay-api "dev-main"
+    - cd relay-api
+    - composer require dbp/relay-base-person-bundle
+    - composer require dbp/relay-base-person-connector-ldap-bundle
