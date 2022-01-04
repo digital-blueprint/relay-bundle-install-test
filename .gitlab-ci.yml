@@ -23,3 +23,8 @@ bundle-install-test-job:
     - cd relay-api
     - composer require dbp/relay-base-person-bundle
     - composer require dbp/relay-base-person-connector-ldap-bundle
+    - composer require dbp/relay-frontend-bundle
+    - composer require dbp/relay-greenlight-bundle
+    - composer require dbp/relay-greenlight-connector-campusonline-bundle
+    - composer require dbp/relay-checkin-bundle
+    - composer require dbp/relay-campusonline-bundle
