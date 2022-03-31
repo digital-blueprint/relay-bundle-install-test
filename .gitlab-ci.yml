@@ -29,4 +29,5 @@ bundle-install-test-job:
     - composer require dbp/relay-checkin-bundle
     - composer require dbp/relay-esign-bundle
     - composer require dbp/relay-formalize-bundle
+    - composer require dbp/relay-sublibrary-bundle
 #    - composer require dbp/relay-campusonline-bundle
