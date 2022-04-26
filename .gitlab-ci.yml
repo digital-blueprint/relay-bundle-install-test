@@ -30,4 +30,6 @@ bundle-install-test-job:
     - composer require dbp/relay-esign-bundle
     - composer require dbp/relay-formalize-bundle
     - composer require dbp/relay-sublibrary-bundle
+    - composer require dbp/relay-template-bundle 
+    - composer require dbp/relay-example-bundle 
 #    - composer require dbp/relay-campusonline-bundle
