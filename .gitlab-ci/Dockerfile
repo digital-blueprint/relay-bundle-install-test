@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     npm \
     lsb-release \
+    git \
     && rm -rf /var/lib/apt/lists/*
 
 # PHP Repo
