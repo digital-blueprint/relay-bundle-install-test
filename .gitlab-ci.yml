@@ -51,18 +51,3 @@ bundle-install-php8.1:
   variables:
     PHP: "php8.1"
   <<: *bundle_install_defaults
-
-.bundle_create_defaults: &bundle_create_defaults
-  script:
-    - sudo update-alternatives --set php "/usr/bin/${PHP}"
-    - npx @digital-blueprint/cli generate-bundle --unique-name=my-test --friendly-name="My Test" --example-entity=Test
-    - cd relay-my-test-bundle
-    - composer install
-    - composer test
-    - composer lint
-
-bundle-create-php7.4:
-  stage: test
-  variables:
-    PHP: "php7.4"
-  <<: *bundle_create_defaults
