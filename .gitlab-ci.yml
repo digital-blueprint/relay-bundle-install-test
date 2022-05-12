@@ -18,6 +18,7 @@ stages:
 .bundle_install_defaults: &bundle_install_defaults
   script:
     - sudo update-alternatives --set php "/usr/bin/${PHP}"
+    - composer --version -vvv
     - composer create-project dbp/relay-server-template relay-api "dev-main"
     - cd relay-api
     - composer require dbp/relay-base-person-bundle
@@ -43,4 +44,10 @@ bundle-install-php8.0:
   stage: test
   variables:
     PHP: "php8.0"
+  <<: *bundle_install_defaults
+
+bundle-install-php8.1:
+  stage: test
+  variables:
+    PHP: "php8.1"
   <<: *bundle_install_defaults
