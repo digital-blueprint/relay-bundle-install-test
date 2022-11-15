@@ -24,6 +24,7 @@ RUN apt-get update && apt-get install -y \
     php7.4-ldap \
     php7.4-zip \
     php7.4-gmp \
+    php7.4-intl \
     php7.4-xdebug \
     php7.4-gd \
     php7.4-mysql \
@@ -40,6 +41,7 @@ RUN apt-get update && apt-get install -y \
     php8.0-ldap \
     php8.0-zip \
     php8.0-gmp \
+    php8.0-intl \
     php8.0-xdebug \
     php8.0-gd \
     php8.0-mysql \
@@ -56,6 +58,7 @@ RUN apt-get update && apt-get install -y \
     php8.1-ldap \
     php8.1-zip \
     php8.1-gmp \
+    php8.1-intl \
     php8.1-xdebug \
     php8.1-gd \
     php8.1-mysql \
