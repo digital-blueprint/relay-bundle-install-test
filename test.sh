@@ -15,3 +15,4 @@ composer require --with-all-dependencies dbp/relay-formalize-bundle
 composer require --with-all-dependencies dbp/relay-sublibrary-bundle
 composer require --with-all-dependencies dbp/relay-template-bundle
 composer require --with-all-dependencies dbp/relay-example-bundle
+composer require --with-all-dependencies dbp/relay-dispatch-bundle
