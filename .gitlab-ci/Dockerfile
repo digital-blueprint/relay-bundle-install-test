@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     lsb-release \
     git \
+    jq \
     && rm -rf /var/lib/apt/lists/*
 
 # PHP Repo
