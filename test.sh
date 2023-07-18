@@ -15,8 +15,6 @@ skipPackages=(
     # FIXME: missing dependency
     "dbp/relay-core-connector-ldap-bundle"
     # FIXME: missing recipe
-    "dbp/relay-mono-bundle"
-    "dbp/relay-mono-connector-campusonline-bundle"
     "dbp/relay-mono-connector-generic-bundle"
     "dbp/relay-mono-connector-payunity-bundle"
     # should be skipped because it's a template
