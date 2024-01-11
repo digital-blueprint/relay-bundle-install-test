@@ -44,3 +44,9 @@ bundle-install-php8.2:
   variables:
     PHP: "php8.2"
   <<: *bundle_install_defaults
+
+bundle-install-php8.3:
+  stage: test
+  variables:
+    PHP: "php8.3"
+  <<: *bundle_install_defaults

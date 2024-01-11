@@ -84,6 +84,23 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 COPY ./php-ini-overrides.ini /etc/php/8.2/cli/conf.d/
 
+# PHP 8.3
+RUN apt-get update && apt-get install -y \
+    php8.3 \
+    php8.3-curl \
+    php8.3-soap \
+    php8.3-xml \
+    php8.3-ldap \
+    php8.3-zip \
+    php8.3-gmp \
+    php8.3-intl \
+    php8.3-xdebug \
+    php8.3-gd \
+    php8.3-mysql \
+    php8.3-mbstring \
+    && rm -rf /var/lib/apt/lists/*
+COPY ./php-ini-overrides.ini /etc/php/8.3/cli/conf.d/
+
 # Default to PHP 7.4
 RUN sudo update-alternatives --set php /usr/bin/php7.4
 RUN sudo update-alternatives --set phar /usr/bin/phar7.4
@@ -96,7 +113,7 @@ USER user
 
 # Install a newer composer
 RUN mkdir -p /home/user/.local/bin
-RUN curl -L https://github.com/composer/getcomposer.org/raw/main/web/download/2.4.4/composer.phar -o /home/user/.local/bin/composer
+RUN curl -L https://github.com/composer/getcomposer.org/raw/main/web/download/2.6.6/composer.phar -o /home/user/.local/bin/composer
 RUN chmod a+x /home/user/.local/bin/composer
 ENV PATH "/home/user/.local/bin:${PATH}"
 
