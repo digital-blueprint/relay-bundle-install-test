@@ -1,4 +1,4 @@
-name: ? Bundle Install Test
+name: 📦 Bundle Install Test
 
 on:
   push:
