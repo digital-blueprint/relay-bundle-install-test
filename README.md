@@ -1,15 +1,20 @@
-# Bundle Install Test
+# Relay Bundle Install Test
 
-[GitHub](https://github.com/digital-blueprint/bundle-install-test)
+[GitHub](https://github.com/digital-blueprint/relay-bundle-install-test)
 
-[![? Bundle Install Test](https://github.com/digital-blueprint/bundle-install-test/actions/workflows/install-test.yml/badge.svg)](https://github.com/digital-blueprint/bundle-install-test/actions/workflows/install-test.yml)
+[![? Bundle Install Test](https://github.com/digital-blueprint/relay-bundle-install-test/actions/workflows/install-test.yml/badge.svg)](https://github.com/digital-blueprint/relay-bundle-install-test/actions/workflows/install-test.yml)
 
-Workflow to test the installation of the Digital Blueprint Symfony Bundles.
+This repo regularly runs a GitHub Actions workflow and tests the installation and initial setup of the [relay-server-template](https://github.com/digital-blueprint/relay-server-template) and all available relay bundles. It makes sure that:
+
+* a working API server can be created using the server template
+* all available bundles can be installed and their dependencies are met
+* there exist working [flex recipes](https://github.com/digital-blueprint/symfony-recipes/) for all bundles, so each bundle can be installed using `composer require` without specifying extra configuration
 
 ## Requirements
 
-- PHP
-- Composer
+- composer
+- curl
+- jq
 
 ## Usage
 
