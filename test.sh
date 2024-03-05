@@ -19,6 +19,8 @@ skipPackages=(
     # FIXME: missing recipe
     "dbp/relay-mono-connector-generic-bundle"
     "dbp/relay-mono-connector-payunity-bundle"
+    # FIXME: should be fixed on the next release
+    "dbp/relay-blob-bundle"
     # should be skipped because it's a template
     "dbp/relay-server-template"
 )
@@ -27,11 +29,6 @@ for packageName in $packageNames; do
     # Skip non-relay packages
     if [[ $packageName != "dbp/relay-"* ]]; then
         continue
-    fi
-
-    # XXX: temporary fix
-    if [[ $packageName = "dbp/relay-blob-bundle" ]]; then
-        packageName="${packageName}:dev-main"
     fi
 
     # Check if the package should be skipped
