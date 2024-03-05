@@ -29,6 +29,11 @@ for packageName in $packageNames; do
         continue
     fi
 
+    # XXX: temporary fix
+    if [[ $packageName = "dbp/relay-blob-bundle" ]]; then
+        packageName="${packageName}:dev-main"
+    fi
+
     # Check if the package should be skipped
     if [[ " ${skipPackages[@]} " =~ " ${packageName} " ]]; then
         echo "::group::Skipped $packageName"
