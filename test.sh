@@ -21,6 +21,7 @@ skipPackages=(
     "dbp/relay-mono-connector-payunity-bundle"
     # FIXME: should be fixed on the next release
     "dbp/relay-blob-bundle"
+    "dbp/relay-blob-connector-filesystem-bundle"
     # should be skipped because it's a template
     "dbp/relay-server-template"
 )
