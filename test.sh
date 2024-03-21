@@ -22,6 +22,7 @@ skipPackages=(
     # FIXME: should be fixed on the next release
     "dbp/relay-blob-bundle"
     "dbp/relay-blob-connector-filesystem-bundle"
+    "dbp/relay-nexus-bundle"
     # should be skipped because it's a template
     "dbp/relay-server-template"
 )
