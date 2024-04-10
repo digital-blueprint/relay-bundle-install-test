@@ -14,8 +14,6 @@ composer remove --no-interaction "dbp/relay-auth-bundle"
 echo "::endgroup::"
 
 skipPackages=(
-    # FIXME: missing dependency
-    "dbp/relay-core-connector-ldap-bundle"
     # FIXME: missing recipe
     "dbp/relay-mono-connector-generic-bundle"
     "dbp/relay-mono-connector-payunity-bundle"
