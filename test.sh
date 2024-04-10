@@ -14,8 +14,6 @@ composer remove --no-interaction "dbp/relay-auth-bundle"
 echo "::endgroup::"
 
 skipPackages=(
-    # FIXME: missing recipe
-    "dbp/relay-mono-connector-payunity-bundle"
     # should be skipped because it's a template
     "dbp/relay-server-template"
 )
