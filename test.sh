@@ -10,7 +10,6 @@ echo "::group::Install dbp/relay-server-template"
 rm -Rf relay-api
 composer create-project dbp/relay-server-template relay-api
 cd relay-api
-composer remove --no-interaction "dbp/relay-auth-bundle"
 echo "::endgroup::"
 
 skipPackages=(
