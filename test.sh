@@ -31,6 +31,16 @@ for packageName in $packageNames; do
         continue
     fi
 
+    # Skip packages without a tagged version
+    packageInfo=$(curl --fail -s "https://repo.packagist.org/p2/${packageName}.json")
+    hasVersions=$(echo "$packageInfo" | jq -r '.packages | to_entries | .[0].value | length')
+    if [[ "$hasVersions" -eq 0 ]]; then
+        echo "::group::Skipped $packageName"
+        echo "Skipping package: $packageName (no tagged version)"
+        echo "::endgroup::"
+        continue
+    fi
+
     echo "::group::Install $packageName"
     composer require --no-interaction --with-all-dependencies "$packageName"
     echo "::endgroup::"
